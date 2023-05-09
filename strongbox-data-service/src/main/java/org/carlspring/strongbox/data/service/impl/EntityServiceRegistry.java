@@ -19,6 +19,7 @@ public class EntityServiceRegistry implements BeanFactoryPostProcessor
 
     private Map<Class, CommonCrudService> entityServiceMap = new ConcurrentHashMap<>();
     private volatile List<String> crudServiceBeanList;
+    @Autowired
     private ConfigurableListableBeanFactory beanFactory;
 
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory)
