@@ -41,6 +41,7 @@ public class ProxyRepositoryConnectionPoolConfigurationServiceImpl
 
     @Autowired
     private PoolingHttpClientConnectionManager poolingHttpClientConnectionManager;
+    @Autowired
     private IdleConnectionMonitorThread idleConnectionMonitorThread;
 
     @Value("${pool.maxConnections:200}")
