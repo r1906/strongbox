@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 public class EntityServiceRegistry implements BeanFactoryPostProcessor
 {
 
+    @Autowired
     private Map<Class, CommonCrudService> entityServiceMap = new ConcurrentHashMap<>();
     private volatile List<String> crudServiceBeanList;
     @Autowired
