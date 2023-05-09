@@ -253,8 +253,11 @@ public class MavenArtifactControllerTest
                            "  <version>" + version + "</version>\n" +
                            "  <goalPrefix>dependency</goalPrefix>\n" +
                            "</plugin>";
+                           
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        factory.setFeature("http://javax.xml.XMLConstants/feature/secure-processing", true);
         DocumentBuilder builder = factory.newDocumentBuilder();
+        
         Document doc = builder.parse(new InputSource(new StringReader(xmlSource)));
 
         // Write the parsed document to an xml file
