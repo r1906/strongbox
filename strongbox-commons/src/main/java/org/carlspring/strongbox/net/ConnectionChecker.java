@@ -22,7 +22,7 @@ public class ConnectionChecker
     {
         boolean isConnected = false;
      
-        try (Socket socket = new Socket())
+        try (Socket socket = SSLSocketFactory.getDefault().createSocket())
         {
             socket.connect(new InetSocketAddress(host, port), timeout);
             isConnected = socket.isConnected();
