@@ -21,7 +21,8 @@ public class ConnectionChecker
             throws IOException
     {
         boolean isConnected = false;
-        try (Socket socket = new Socket())
+     
+        try (ServerSocket socket =  SSLServerSocketFactory.getDefault().createSocket())
         {
             socket.connect(new InetSocketAddress(host, port), timeout);
             isConnected = socket.isConnected();
