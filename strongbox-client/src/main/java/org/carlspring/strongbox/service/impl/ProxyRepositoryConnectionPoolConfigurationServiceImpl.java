@@ -35,10 +35,11 @@ import org.springframework.stereotype.Component;
 public class ProxyRepositoryConnectionPoolConfigurationServiceImpl
         implements ProxyRepositoryConnectionPoolConfigurationService
 {
-    @Autowired
+   
     private static final Logger logger = LoggerFactory.getLogger(
             ProxyRepositoryConnectionPoolConfigurationServiceImpl.class);
 
+    @Autowired
     private PoolingHttpClientConnectionManager poolingHttpClientConnectionManager;
     private IdleConnectionMonitorThread idleConnectionMonitorThread;
 
